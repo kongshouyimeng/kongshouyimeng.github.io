@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            font-size: 40px;
+            text-align: center;
+        }
+        header{
+            height: 25%;
+          
+            background-color: burlywood;
+        }
+        main{
+            height: 65%;
+           
+            background-color: blue;
+            color: white;
+        }
+        footer{
+            height: 10%;
+            
+            background-color: red;
+        }
+    </style>
+    <script>
+        console.time('smollBang')
+        let timerBegin= new Date();
+    </script>
+</head>
+<body>
+    <header>
+      第一个网页
+    </header>
+    <main>
+    无
+    </main>
+    <footer>
+    20223489李昱鹏22计科二班
+    </footer>
+<script>
+    let myBody = document.querySelector('body');
+    myBody.style.height = innerHeight - 15 + 'px' ;
+    console.timeEnd('smollBang') ;
+    myBody.querySelector('header').textContent = "页面渲染时间：" + ( new Date() - timerBegin ) + 'ms';
+    console.time('xmb') ;
+    timerBegin = new Date() ;
+    let i= 1 ;
+    while (  i < 2**32 / 40 ){
+        i ++ ; 
+    }
+    console.timeEnd('xmb') ;
+    myBody.querySelector('main').textContent = "算一个小目标的时间：" + ( new Date() - timerBegin ) + 'ms';
+</script>
+</body>
+</html>
